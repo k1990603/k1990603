@@ -1,0 +1,192 @@
+{
+  "admin": [
+    {
+      "parentNode": "区域管理",
+      "index": "1",
+      "childNode": [
+        {
+          "title": "区域",
+          "index": 1,
+          "active": false,
+          "link": "/areaManage/areaPage",
+          "icon": "iconfont icon-ziyuan1"
+        },
+        {
+          "title": "机房",
+          "index": 2,
+          "active": false,
+          "link": "/areaManage/datacenterPage",
+          "icon": "iconfont icon-ziyuan"
+        },
+        {
+          "title": "集群",
+          "index": 3,
+          "active": false,
+          "link": "/areaManage/hostPoolPage",
+          "icon": "iconfont icon-ziyuan4"
+        }
+      ]
+    },
+    {
+      "parentNode": "网络管理",
+      "index": "2",
+      "childNode": [
+        {
+          "title": "专有网络",
+          "index": 1,
+          "active": false,
+          "link": "/netWorkCom/privatNet",
+          "icon": "confont icon-ziyuan22"
+        },
+        {
+          "title": "子网",
+          "index": 2,
+          "active": false,
+          "link": "/areaManage/datacenterPage",
+          "icon": "iconfont icon-ziyuan20"
+        },
+        {
+          "title": "VLAN管理",
+          "index": 3,
+          "active": false,
+          "link": "/areaManage/hostPoolPage",
+          "icon": "iconfont icon-ziyuan24"
+        },
+        {
+          "title": "IP管理",
+          "index": 2,
+          "active": false,
+          "link": "/areaManage/datacenterPage",
+          "icon": "iconfont icon-ziyuan25"
+        },
+        {
+          "title": "公网IP管理",
+          "index": 2,
+          "active": false,
+          "link": "/areaManage/datacenterPage",
+          "icon": "iconfont icon-ziyuan19"
+        }
+      ]
+    },
+    {
+      "parentNode": "资源管理",
+      "index": "3",
+      "childNode": [
+        {
+          "title": "HOST",
+          "index": 1,
+          "active": false,
+          "link": "/resourceManage/host",
+          "icon": "iconfont icon-ziyuan5"
+        },
+        {
+          "title": "VM",
+          "index": 2,
+          "active": false,
+          "link": "/resourceManage/vm",
+          "icon": "iconfont icon-ziyuan7"
+        },
+        {
+          "title": "安全组",
+          "index": 3,
+          "active": false,
+          "link": "/resourceManage/safeGroup",
+          "icon": "iconfont icon-ziyuan16"
+        }
+      ]
+    }
+  ],
+  "user": [
+    {
+      "parentNode": "资源管理",
+      "index": 1,
+      "childNode": [
+        {
+          "title": "安全组",
+          "link": "",
+          "icon": "iconfont icon-ziyuan16"
+        },
+        {
+          "title": "云主机",
+          "link": "",
+          "icon": "el-icon-tickets"
+        }
+      ]
+    },
+    {
+      "parentNode": "网络管理",
+      "index": 2,
+      "childNode": [
+        {
+          "title": "专有网络",
+          "link": "",
+          "icon": "el-icon-tickets"
+        },
+        {
+          "title": "子网",
+          "link": "",
+          "icon": "el-icon-tickets"
+        },
+        {
+          "title": "IP管理",
+          "link": "",
+          "icon": "el-icon-tickets"
+        }
+      ]
+    },
+    {
+      "parentNode": "负载均衡",
+      "index": 3,
+      "childNode": [
+        {
+          "title": "LB实例列表",
+          "link": "",
+          "icon": "el-icon-tickets"
+        },
+        {
+          "title": "证书管理",
+          "link": "",
+          "icon": "el-icon-tickets"
+        }
+      ]
+    },
+    {
+      "parentNode": "权限管理",
+      "index": 4,
+      "childNode": [
+        {
+          "title": "项目管理",
+          "link": "",
+          "icon": "el-icon-tickets"
+        },
+        {
+          "title": "我的信息",
+          "link": "",
+          "icon": "el-icon-tickets"
+        }
+      ]
+    },
+    {
+      "parentNode": "工单",
+      "index": 5,
+      "childNode": [
+        {
+          "title": "工单列表",
+          "link": "",
+          "icon": "el-icon-tickets"
+        }
+      ]
+    },
+    {
+      "parentNode": "日志管理",
+      "index": 6,
+      "childNode": [
+        {
+          "title": "日志管理",
+          "link": "",
+          "icon": "el-icon-tickets"
+        }
+      ]
+    }
+  ]
+}

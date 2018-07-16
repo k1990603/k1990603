@@ -1,0 +1,132 @@
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif !important;
+}
+body,
+html {
+  -webkit-text-size-adjust: none;
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+img {
+  border: 0;
+  border: none;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+a,
+input,
+button {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    width: 970px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    width: 750px;
+    margin: 0 auto;
+  }
+}
+
+.dialogTemplate .el-dialog .el-dialog__header,
+.dialogTemplate.el-dialog .el-dialog__header {
+  text-align: center;
+  background: #fafafa;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.dialog-footer {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
+input::-webkit-input-placeholder {
+  /* WebKit browsers */
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+input:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+input::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+input:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.curPage {
+  margin-left: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 16px;
+  line-height: 50px;
+  font-weight: 700;
+  margin-right: 20px;
+  max-width: 70%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

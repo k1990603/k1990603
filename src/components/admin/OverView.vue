@@ -3,7 +3,7 @@
     <div class="over_view">
       <div>
         <span class="user-name">欢迎，
-          <span>{{userInfo.user_name}}</span>
+          <!-- <span>{{userInfo.user_name}}</span> -->
         </span>
       </div>
       <!-- 平台概览 -->
@@ -227,7 +227,7 @@ import { mapGetters } from 'vuex'
 import echarts from 'echarts'
 import 'echarts/map/js/china'
 // import chinaJson from '../../data/china.json'
-import { getAdminIndex } from './../../api/index/index'
+import { getAdminIndex,test } from './../../api/index/index'
 import { filterHostPoolPageData } from './../../api/admin/areaManage'
 import { getAllAreaDcHcNet } from '@/api/admin/netWork'
 export default {
@@ -314,6 +314,10 @@ export default {
     }
   },
   mounted() {
+    let data={cookie:document.cookie}
+    this.test(data).then(res => {
+        console.log(res.data)
+      })
     this.myChart.vmBar = echarts.init(document.getElementById('vmBar'))
     this.myChart.cpuBar = echarts.init(document.getElementById('cpuBar'))
     this.myChart.memBar = echarts.init(document.getElementById('memBar'))
@@ -321,14 +325,15 @@ export default {
     this.getAdminOverviewData()
   },
   computed: {
-    ...mapGetters({
-      userInfo: 'getUserInfo'
-    })
+    // ...mapGetters({
+    //   userInfo: 'getUserInfo'
+    // })
   },
   methods: {
     getAllAreaDcHcNet,
     getAdminIndex,
     filterHostPoolPageData,
+    test,
     getAdminOverviewData() {
       this.getAdminIndex()
         .then(response => {

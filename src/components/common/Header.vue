@@ -36,13 +36,13 @@
       </div>
       <div class="itemBox" @mouseover="authOverShow()" @mouseout="authOutHide()">
         <span v-show="curRole === '系统管理员'">
-          <img class='roleImg' @mouseover="authOverShow()" @mouseout="authOutHide()" src="/static/image/header/admin.png" alt="">&nbsp;&nbsp;{{userInfo.user_name}}
+          <!-- <img class='roleImg' @mouseover="authOverShow()" @mouseout="authOutHide()" src="/static/image/header/admin.png" alt="">&nbsp;&nbsp;{{userInfo.user_name}} -->
         </span>
         <span v-show="curRole === '一般管理员'">
-          <img class='roleImg' @mouseover="authOverShow()" @mouseout="authOutHide()" src="/static/image/header/webmaster.png" alt="">&nbsp;&nbsp;{{userInfo.user_name}}
+          <!-- <img class='roleImg' @mouseover="authOverShow()" @mouseout="authOutHide()" src="/static/image/header/webmaster.png" alt="">&nbsp;&nbsp;{{userInfo.user_name}} -->
         </span>
         <span v-show="curRole === '用户'">
-          <img class='roleImg' src="/static/image/header/user.png" alt="">&nbsp;&nbsp;{{userInfo.user_name}}
+          <!-- <img class='roleImg' src="/static/image/header/user.png" alt="">&nbsp;&nbsp;{{userInfo.user_name}} -->
         </span>
         <transition name="fade">
           <div class='cardBox' v-if="userAuthShow">
@@ -75,29 +75,29 @@ export default {
       moduleArr: [],
       curLesse: {},
       lesseeArr: [],
-      curRole: '', // 管理员/用户
+      curRole: '系统管理员', // 管理员/用户
       roleArr: []
     }
   },
   mounted() {
-    this.curRole = this.userInfo.curRole
-    this.roleArr = this.userInfo.roleArr
-    this.lesseeArr = this.userInfo.user_tenant
-    this.curLesse = this.userInfo.tenantInfo
+    // this.curRole = this.userInfo.curRole
+    // this.roleArr = this.userInfo.roleArr
+    // this.lesseeArr = this.userInfo.user_tenant
+    // this.curLesse = this.userInfo.tenantInfo
     this.formatePage()
   },
   computed: {
-    ...mapGetters({
-      userInfo: 'getUserInfo'
-    })
+    // ...mapGetters({
+    //   userInfo: 'getUserInfo'
+    // })
   },
   methods: {
     loginout,
-    ...mapActions({
-      updateLocalNav: 'updateLocalNav',
-      updateCurRole: 'updateCurRole',
-      updateUserInfo: 'updateUserInfo'
-    }),
+    // ...mapActions({
+    //   updateLocalNav: 'updateLocalNav',
+    //   updateCurRole: 'updateCurRole',
+    //   updateUserInfo: 'updateUserInfo'
+    // }),
     leseeOverShow() {
       this.leseeShow = true
     },
@@ -154,7 +154,7 @@ export default {
       }
     },
     selModle(item) {
-      this.updateLocalNav(item.name)
+      // this.updateLocalNav(item.name)
       localStorage.setItem('localNav', JSON.stringify(item.name))
       this.$router.push(item.childNode[0].link)
     },
@@ -189,14 +189,14 @@ export default {
       }
     },
     checkoutRole(item) {
-      let userInfo = this.userInfo
+      // let userInfo = this.userInfo
       switch (item) {
         case '系统管理员':
           this.curRole = '系统管理员'
           this.moduleArr = this.navData.admin
           userInfo.curRole = item
-          localStorage.setItem('userInfo', JSON.stringify(userInfo))
-          this.updateUserInfo(userInfo)
+          // localStorage.setItem('userInfo', JSON.stringify(userInfo))
+          // this.updateUserInfo(userInfo)
           this.$router.replace({
             path: '/sf_cloud/adminOverView',
             query: { isChange: item }

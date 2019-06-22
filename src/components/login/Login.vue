@@ -82,49 +82,50 @@ export default {
     },
     login() {
       this.isLogining = true
-      this.$axios.post('/login', this.loginParams).then(res => {
-        this.isLogining = false
-        if (res.data.code === 0) {
-          let userInfo = res.data.data
-          let roleArr = []
-          if (userInfo.user_role_type.length > 0) {
-            userInfo.user_role_type = Array.from(
-              new Set(userInfo.user_role_type)
-            )
-            userInfo.user_role_type.forEach((item, index) => {
-              roleArr.push(this.$store.state.user.allRole[parseInt(item)])
-            })
-            userInfo.roleArr = roleArr
-            userInfo.curRole = roleArr[0] // 默认角色
-            if (userInfo.user_tenant.length > 0) {
-              userInfo.tenantInfo = userInfo.user_tenant[0]
-            } else {
-              userInfo.tenantInfo = []
-            }
-            window.localStorage.setItem(
-              'userInfo',
-              JSON.stringify(res.data.data)
-            )
-            this.updateUserInfo(userInfo)
-            // this.$refs['loginParams'].resetFields()
-            switch (userInfo.user_role_type[0]) {
-              case '1':
-                this.$router.push('/sf_cloud/adminOverView')
-                break
-              case '2':
-                this.$router.push('/sf_cloud/UserOverView')
-                break
-              case '4':
-                this.$router.push('/sf_cloud/adminOverView')
-            }
-          } else {
-            this.$message({
-              type: 'error',
-              message: '您没有权限登录或者账户密码不正确,请联系管理员'
-            })
-          }
-        }
-      })
+       this.$router.push('/sf_cloud/userOverView')
+      // this.$axios.post('/login', this.loginParams).then(res => {
+      //   this.isLogining = false
+      //   if (res.data.code === 0) {
+      //     let userInfo = res.data.data
+      //     let roleArr = []
+      //     if (userInfo.user_role_type.length > 0) {
+      //       userInfo.user_role_type = Array.from(
+      //         new Set(userInfo.user_role_type)
+      //       )
+      //       userInfo.user_role_type.forEach((item, index) => {
+      //         roleArr.push(this.$store.state.user.allRole[parseInt(item)])
+      //       })
+      //       userInfo.roleArr = roleArr
+      //       userInfo.curRole = roleArr[0] // 默认角色
+      //       if (userInfo.user_tenant.length > 0) {
+      //         userInfo.tenantInfo = userInfo.user_tenant[0]
+      //       } else {
+      //         userInfo.tenantInfo = []
+      //       }
+      //       window.localStorage.setItem(
+      //         'userInfo',
+      //         JSON.stringify(res.data.data)
+      //       )
+      //       this.updateUserInfo(userInfo)
+      //       // this.$refs['loginParams'].resetFields()
+      //       switch (userInfo.user_role_type[0]) {
+      //         case '1':
+      //           this.$router.push('/sf_cloud/adminOverView')
+      //           break
+      //         case '2':
+      //           this.$router.push('/sf_cloud/UserOverView')
+      //           break
+      //         case '4':
+      //           this.$router.push('/sf_cloud/adminOverView')
+      //       }
+      //     } else {
+      //       this.$message({
+      //         type: 'error',
+      //         message: '您没有权限登录或者账户密码不正确,请联系管理员'
+      //       })
+      //     }
+      //   }
+      // })
     }
   }
 }

@@ -11,3 +11,7 @@ export function getUserHomepageArea (params) {
 export function getAdminIndex () {
   return axios.get('/admin_homepage')
 }
+
+export function test (params) {
+  return axios.get('/test.php',{ params: params })
+}

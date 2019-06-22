@@ -111,6 +111,8 @@ router.beforeEach((to, from, next) => {
     localStorage.setItem('localNav', to.meta.navInfo)
     store.dispatch('updateLocalNav', to.meta.navInfo)
   }
+  // console.log(from)
+  // console.log(to.path)
   // 判断用户是否已登录 已登录则不能进入登录页面
   if (
     store.getters.getUserInfo &&
@@ -168,6 +170,8 @@ router.beforeEach((to, from, next) => {
 })
 
 router.afterEach((to, from, next) => {
+  // console.log('-----------')
+  // history.go(-1)
   window.scrollTo(0, 0)
 })
 export default router
